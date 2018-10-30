@@ -1,7 +1,9 @@
 import React from 'react';
-
+import TodoListContainer from './todos/todo_list_container';
 const App = (props) => (
-  <h1>Hi There!</h1>
+  <div>
+    <TodoListContainer/>
+  </div>
 );
 
 export default App;
