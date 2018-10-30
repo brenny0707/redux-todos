@@ -5,7 +5,9 @@ import Root from './components/root';
 
 const store = configureStore();
 
+import { allTodos } from './reducers/selectors';
 window.store = store;
+window.allTodos = allTodos;
 
 document.addEventListener('DOMContentLoaded', () => {
   const preloadedState = localStorage.state ?
