@@ -1,7 +1,12 @@
 import React from 'react';
+import TodoListItem from './todo_list_item';
 
 const TodoList = (props) => (
-  <h3>THE TODO LIST</h3>
+  <ul>
+    {props.todos.map( (todo) => (
+      <TodoListItem key={`${todo.id}-title`} todo={todo}/>
+    ))}
+  </ul>
 )
 
 export default TodoList;
