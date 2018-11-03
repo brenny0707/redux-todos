@@ -7,7 +7,7 @@ const TodoList = (props) => (
     <ul>
       {console.log(props.todos)}
         {props.todos.map( (todo) => (
-        <TodoListItem key={`${todo.id}-title`} todo={todo}/>
+        <TodoListItem key={`${todo.id}-title`} todo={todo} deleteTodo={props.deleteTodo}/>
       ))}
     </ul>
   </div>
