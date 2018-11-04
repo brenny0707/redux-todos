@@ -26,9 +26,7 @@ const todosReducer = (state = sampleTodoState, action) => {
       newState = Object.assign({}, state, todosObj);
       return newState;
     case RECEIVE_TODO:
-      console.log(action.todo);
       newState = Object.assign({}, state, {[action.todo.id]: action.todo});
-      console.log(newState);
       return newState;
     case DELETE_TODO:
       console.log(action.todoId);

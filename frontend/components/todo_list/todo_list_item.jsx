@@ -10,10 +10,18 @@ const TodoListItem = (props) => {
     props.deleteTodo(todo.id);
   }
 
+  const toggleDone = (e) => {
+    e.preventDefault();
+    const updatedTodo = Object.assign({}, todo, {'done': !todo.done});
+    console.log(todo);
+    console.log(updatedTodo);
+    props.receiveTodo(updatedTodo)
+  }
+
   return (
     <li>
       <span>{todo.title}</span>
-      <button>{toggleStatus}</button>
+      <button onClick={toggleDone}>{toggleStatus}</button>
       <button onClick={handleDelete}>Delete</button>
     </li>
   )
