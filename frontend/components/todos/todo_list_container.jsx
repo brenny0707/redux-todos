@@ -12,7 +12,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     receiveTodo: (todo) => dispatch(receiveTodo(todo)),
-    deleteTodo: (todo) => dispatch(deleteTodo(todo)),
+    deleteTodo: (todoId) => dispatch(deleteTodo(todoId)),
   }
 }
 
