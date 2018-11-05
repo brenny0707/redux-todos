@@ -20,8 +20,6 @@ class TodoListItem extends React.Component {
     e.preventDefault();
     const { todo, receiveTodo } = this.props;
     const updatedTodo = Object.assign({}, todo, {'done': !todo.done});
-    console.log(todo);
-    console.log(updatedTodo);
     receiveTodo(updatedTodo)
   }
 

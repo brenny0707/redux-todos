@@ -5,7 +5,6 @@ const TodoList = (props) => (
   <div className='todo-list-div'>
     <TodoForm receiveTodo={props.receiveTodo}/>
     <ul>
-      {console.log(props.todos)}
         {props.todos.map( (todo) => (
         <TodoListItem
         key={`${todo.id}-title`}

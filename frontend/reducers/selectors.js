@@ -5,3 +5,13 @@ export const allTodos = (state) => {
     return state.todos[key];
   })
 }
+
+export const stepsByTodoId = (state, todoId) => {
+  const stepArr = [];
+  const keys = Object.keys(state.steps);
+  keys.forEach ( (key) => {
+    const step = state.steps[key];
+    if (step.todoId === todoId) stepArr.push(step);
+  })
+  return stepArr;
+}
